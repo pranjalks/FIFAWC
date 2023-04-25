@@ -38,7 +38,7 @@ WCteamchart3 = html.Div(className="card-chart-container col-lg-6 md-1 sm-1",
 )
 
 def update_chart3(query_team1, query_team2):
-    cmb = pd.read_csv('data/country_minute_bookings_atul.csv')
+    cmb = pd.read_csv('data/country_minute_bookings_a.csv')
     cmb['yellow_card'] = cmb['yellow_card'] + cmb['second_yellow_card']
     cmb['red_card'] = cmb['red_card'] + cmb['second_yellow_card']
 

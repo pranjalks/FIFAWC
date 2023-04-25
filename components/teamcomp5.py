@@ -38,7 +38,7 @@ WCteamchart5 = html.Div(className="card-chart-container col-lg-5 md-1 sm-1",
 )
 
 def update_chart5(query_team1, query_team2):
-    tvt = pd.read_csv('data/teamvsteam_atul.csv')
+    tvt = pd.read_csv('data/teamvsteam_a.csv')
 
     tvt = tvt.groupby(['team_name', 'opponent_name']).sum()
     tvt = tvt.filter(['team_name', 'opponent_name', 'win', 'lose', 'draw'])

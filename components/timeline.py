@@ -26,7 +26,7 @@ def create_card(fig, class_name, title="Title"):
         ), className=class_name
     )
 
-df_tour = pd.read_csv("https://raw.githubusercontent.com/ivan-abboud/fifa-worldcup-dashboard/main/data/processed/tournaments.csv")
+df_tour = pd.read_csv("data/tournaments.csv")
 
 N = 22
 c = ['hsl('+str(h)+',50%'+',50%)' for h in np.linspace(0, 360, N)]
@@ -60,7 +60,7 @@ WCToursTimeline = create_card(class_name="card-chart-container col-lg-12 col-md-
                         ).update_xaxes(categoryorder="total ascending",
                         ).update_layout(margin={"r": 20, "t": 10}))
 
-df_goals = pd.read_csv("https://raw.githubusercontent.com/ivan-abboud/fifa-worldcup-dashboard/main/data/processed/goals.csv")
+df_goals = pd.read_csv("data/goals.csv")
 minutes = df_goals['minute_regulation']
 hist_data = [minutes]
 group_labels = ['goals scored']

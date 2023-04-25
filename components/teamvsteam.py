@@ -125,7 +125,7 @@ def update_team1(value):
     
     return team_code, team_region, team_confederation, wiki_link, f"Read More About {value}", team_flag
 
-df_rival = pd.read_csv("https://raw.githubusercontent.com/jfjelstul/worldcup/master/data-csv/matches.csv")
+df_rival = pd.read_csv("data/matches.csv")
 
 WCteam2 = html.Div(className="col-lg-3 col-md-3 col-sm-3 card-chart-container", children=[html.Div(className="card-chart", children=[
         html.Div(className="card-chart",style={'padding-top': '25px'}, children=[
@@ -191,7 +191,7 @@ WCteam2image = html.Div(className="col-lg-3 col-md-3 col-sm-3 card-chart-contain
 )
 
 def update_rival_select(query_team):
-    matches_df = pd.read_csv("https://raw.githubusercontent.com/jfjelstul/worldcup/master/data-csv/matches.csv")
+    matches_df = pd.read_csv("data/matches.csv")
     away_teams = matches_df.loc[(
         matches_df.away_team_name == query_team)].home_team_name.unique()
     home_teams = matches_df.loc[(

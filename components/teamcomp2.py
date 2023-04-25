@@ -38,8 +38,8 @@ WCteamchart2 = html.Div(className="card-chart-container col-lg-7 md-1 sm-1",
 )
 
 def update_chart2(query_team1, query_team2):
-    tms = pd.read_csv('data/team_minute_stats_atul.csv')
-    tvt = pd.read_csv('data/teamvsteam_atul.csv')
+    tms = pd.read_csv('data/team_minute_stats_a.csv')
+    tvt = pd.read_csv('data/teamvsteam_a.csv')
     tvt = pd.merge(tvt[['match_id', 'match_date', 'team_name', 'opponent_name', 'goals_for', 'goals_against', 'result']],
                 tms[['match_id', 'given_name', 'family_name', 'minute_regulation', 'Event']])
 

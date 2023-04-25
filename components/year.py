@@ -38,7 +38,7 @@ WCparti1 = html.Div(className="card-chart-container col-lg-6 md-1 sm-1",
 )
 
 def update_year1(query_year):
-    tour = pd.read_csv('data/tournaments_atul.csv')
+    tour = pd.read_csv('data/tournaments_a.csv')
 
     df = tour[['tournament_name', 'North America', 'South America', 'Asia', 'Europe', 'Africa', 'Australia']]
     names = ['North America', 'South America', 'Asia', 'Europe', 'Africa', 'Australia']

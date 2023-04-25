@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 from collections import deque
 
-df = pd.read_csv("https://raw.githubusercontent.com/jfjelstul/worldcup/master/data-csv/tournaments.csv")
+df = pd.read_csv("data/tournaments.csv")
 
 def build_component(title="", src=""):
     return dbc.Col([html.Img(
